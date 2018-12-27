@@ -1,0 +1,27 @@
+{
+  "name": "websiterevamp",
+  "version": "1.0.0",
+  "description": "Website revamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavisCSClub/WebsiteRevamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavisCSClub/WebsiteRevamp/issues"
+  },
+  "homepage": "https://github.com/DavisCSClub/WebsiteRevamp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "mongodb": "^3.1.10",
+    "nconf": "^0.10.0"
+  }
+}

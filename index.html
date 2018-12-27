@@ -5,7 +5,7 @@
 		<title>Hyperspace by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -19,6 +19,7 @@
 							<li><a href="#one">Who we are</a></li>
 							<li><a href="#two">Meet the Team</a></li>
 							<li><a href="#three">Get in touch</a></li>
+							<li><a href="#three">Sign in</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -144,7 +145,7 @@
 							<p>The easiest way to contact us is directly through this form or the email listed below! You can also reach us through Facebook and of course, at our weekly meetings. Please do not contact individual officers directly without good reason.</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="/">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
@@ -182,7 +183,59 @@
 						</div>
 					</section>
 
+					<!-- Three -->
+						<section id="three" class="wrapper style3 fade-up">
+							<div class="inner">
+								<h2>Sign in</h2>
+								<p>Sign in to a DCSC Event here</p>
+								<div class="split style1">
+									<section>
+										<form method="post">
+										
+										<input type="text" name="firstName" placeholder="Enter first name..." required>
+
+										<input type="text" name="lastName" placeholder="Enter last name..." required>
+
+										<input list="years" name="year" placeholder="Choose a year...">
+										 <datalist id="years">
+											 <option value="Freshman">
+											 <option value="Sophomore">
+											 <option value="Junior">
+											 <option value="Senior">
+											 <option value="Grad Student">
+											 <option value="Other">
+										 </datalist>
+
+										<input type="text" name="email" placeholder="Enter your email..." required>
+
+										<input list="bitbyte" name="bitbyte" placeholder="Choose bit or byte...">
+										 <datalist id="bitbyte">
+											 <option value="Bit">
+											 <option value="Byte">
+											 <option value="N/A">
+										 </datalist>
+
+										 <input list="source" name="source" placeholder="How did you hear about this event?">
+											<datalist id="source">
+												<option value="Facebook Group">
+												<option value="Classroom Visit">
+												<option value="Flyer">
+												<option value="Department Mailing List">
+												<option value="Word of Mouth">
+												<option value="Other">
+											</datalist>
+
+
+										<input type="submit" value="Sign in!">
+										</form>
+									</section>
+
+								</div>
+							</div>
+						</section>
+
 			</div>
+
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
@@ -197,13 +250,13 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
 
 	</body>
 </html>
