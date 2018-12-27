@@ -6,7 +6,10 @@ app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
+
 app.use(express.static('assets'));
+app.use(express.static('images'));
+
 const mongodb = require('mongodb');
 const http = require('http');
 const nconf = require('nconf');
