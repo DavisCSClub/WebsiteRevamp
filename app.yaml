@@ -1,6 +1,4 @@
-runtime: nodejs10
-api_version: 1
-threadsafe: true
+runtime: nodejs8
 
 handlers:
 - url: /
