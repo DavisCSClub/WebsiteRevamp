@@ -1,5 +1,4 @@
 runtime: nodejs8
-env: flex
 
 handlers:
 - url: /
