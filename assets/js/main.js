@@ -8,7 +8,7 @@
 
 	var	$window = $(window),
 		$body = $('body'),
-		$sidebar = $('#sidebar');
+		$navbar = $('#navbar');
 
 	// Breakpoints.
 		breakpoints({
@@ -44,12 +44,12 @@
 
 			});
 
-	// Sidebar.
-		if ($sidebar.length > 0) {
+	// navbar.
+		if ($navbar.length > 0) {
 
-			var $sidebar_a = $sidebar.find('a');
+			var $navbar_a = $navbar.find('a');
 
-			$sidebar_a
+			$navbar_a
 				.addClass('scrolly')
 				.on('click', function() {
 
@@ -60,7 +60,7 @@
 							return;
 
 					// Deactivate all links.
-						$sidebar_a.removeClass('active');
+						$navbar_a.removeClass('active');
 
 					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
 						$this
@@ -95,9 +95,9 @@
 									$section.removeClass('inactive');
 
 								// No locked links? Deactivate all links and activate this section's one.
-									if ($sidebar_a.filter('.active-locked').length == 0) {
+									if ($navbar_a.filter('.active-locked').length == 0) {
 
-										$sidebar_a.removeClass('active');
+										$navbar_a.removeClass('active');
 										$this.addClass('active');
 
 									}
@@ -118,11 +118,11 @@
 			speed: 1000,
 			offset: function() {
 
-				// If <=large, >small, and sidebar is present, use its height as the offset.
+				// If <=large, >small, and navbar is present, use its height as the offset.
 					if (breakpoints.active('<=large')
 					&&	!breakpoints.active('<=small')
-					&&	$sidebar.length > 0)
-						return $sidebar.height();
+					&&	$navbar.length > 0)
+						return $navbar.height();
 
 				return 0;
 
