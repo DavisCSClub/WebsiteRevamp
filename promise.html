@@ -1,270 +1,411 @@
 <!DOCTYPE HTML>
 <!-- AutoBulid test -->
 <html>
-	<head>
-		<title>Davis Computer Science Club</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta property="og:title" content="Davis Computer Science Club" >
+      <meta property="og:type" content="website" />
+      <meta property="og:image:width" content="1024" />
+      <meta property="og:image:height" content="172" />
+      <meta property="og:description" content="" />
+      <meta name="description" content="" />
+      <meta name="keywords" content="Davis, UC Davis, Computer Science, Club" />
+      <meta name="author" content="Davis Computer Science Club" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta http-equiv="cache-control" content="public" />
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+      <script defer href="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="./assets/css/index.css">
+      <title>Davis Computer Science Club</title>
+    </head>
+    <body>
 
+        <section id="navbar">
+            <img class="navbar__img" src="./images/nav-logo.png"/>
+            <div class="navbar__inner">
+                <nav class="navbar__inner__nav">
+                    <ul>
+                        <li><a href="#one">ABOUT</a></li>
+                        <li><a href="#two">EVENTS</a></li>
+                        <li><a href="#three">MEET THE TEAM</a></li>
+                        <li><a href="#four">CONTACT</a></li>
+                        <li><a href="#five">SIGN IN</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
 
-	<body class="is-preload">
+        <div class="wrapper">
+            <section class="homepage padding-top">
+                <div class="homepage__wrap">
+                    <img class="homepage__wrap__img" src="./images/Logo.jpg">
+                    <div class="hompeage__wrap__descript">
+                        <h1> Welcome to Davis Computer Science Club</h1>
+                        <p> We cultivate the professional development
+                            of our members and connect them with
+                            other passionate peers</p>
+                    </div>
+                </div>
+                <div class="homepage__footer">
+                    <ul class="icon-bar">
+                        <li><a href="https://www.facebook.com/daviscsclub/"><i style="color:#6EC5B5" class="fab fa-facebook fa-3x"></i></a></li>
+                        <li><a href="https://www.instagram.com/daviscsclub/"><i style="color:#6EC5B5" class="fab fa-instagram fa-3x"></i></a></li>
+                    </ul>
+                </div>
+            </section>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">Meet the Team</a></li>
-							<li><a href="#three">Get in touch</a></li>
-							<li><a href="#four">Sign in</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+            <section class="about padding-top" id="one">
+                <h1> WHAT IS DCSC ABOUT?</h1>
+                <div class="about__wrap">
+                    <div class="about__wrap__left">
+                        <img src="./images/monitor-icon.png" class="about__wrap__left__img"></img>
+                        <div class="about__wrap__descript">
+                            <p> The <span> Davis Computer Science Club </span> (DCSC)
+                                organises and connects UC Davis students interested
+                                in the field of computer science. We cultivate
+                                the professional development of our members and augment their education
+                                with practical skills and projects. </p>
+                        </div>
+                    </div>
+                    <div class="about__wrap__right">
+                        <img src="./images/binary-icon.png" class="about__wrap__right__img"></img>
+                        <div class="about__wrap__descript">
+                            <p> We strive to provide a fun and supportive community through
+                                our weekly events. Some of our past events have been:
+                            <div class="about__wrap__right__lower">
+                                <img src= "./images/chip-icon.png" class="about__wrap__right__lower__img">
+                                <ul class="about__wrap__right__lower_list">
+                                    <li> Hack-A-Website </li>
+                                    <li> Courses Preview </li>
+                                    <li> Land That Internship</li>
+                                    <li> Intro to Deep Learning </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+            <section class="events padding-top" id="two">
+                <div class="events__wrapper">
+                    <div class="events__item">
+                        <img src="./images/api-icon.png"/>
+                        <h2>Workshops</h2>
+                        <p>Our club hosts a variety workshops each
+                            quarter ranging from interview preparation
+                            to ios development.</p>
+                    </div>
+                    <div class="events__item">
+                        <img src="./images/api-icon.png"/>
+                        <h2>Socials</h2>
+                        <p>Come to socials for fun and conversation.
+                            Past events include De-Stressers,
+                            Byte/Bit, and the Demo Day showcase.</p>
+                    </div>
+                    <div class="events__item">
+                        <img src="./images/api-icon.png"/>
+                        <h2>Open to All</h2>
+                        <p>You don't have to be computer science major;
+                            we invite everyone who is interested in technology.</p>
+                    </div>
+                </div>
+            </section>
 
-				<section id="one" class="wrapper style3 fade-up">
-					<div class="inner" style="text-align: center;">
-						<h1>Thank you for signing in!</h1>
-					</div>
-				</section>
+            <section class="calender padding-top" id="calender">
+                <div class="calender__header">
+                    <h1> UPCOMING EVENTS </h1>
+                </div>
+                <div class="calender__lists">
+                    <div class="calender__left">
+                        <div class="calender__item">
+                            <h2> JAN 13 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Davis Computer Science Club</h1>
-							<p>We cultivate the professional development of our members and connect them with other passionate peers</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+                        <div class="calender__item">
+                            <h2> JAN 15 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-				<!-- One -->
-					<section id="one" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Who We Are</h2>
-							<p>The Davis Computer Science Club (DCSC) organizes and connects UC Davis students interested in the field of computer science.
-								We cultivate the professional development of our members and augment their education with practical skills and projects.</p>
-							<p>We strive to provide a fun and supportive community through our weekly events; some of our past events have been Hack-A-Website,
-								Courses Preview, Land That Internship, and Intro to Deep Learning.</p>
-						</div>
-					</section>
+                        <div class="calender__item">
+                            <h2> JAN 22 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-					<section id="" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="./images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Workshops</h2>
-									<p>Our club hosts a variety workshops each quarter ranging from interview preparation to ios development.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="./images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Socials</h2>
-									<p>Come to socials for fun and conversation. Past events include De-Stressers, Byte/Bit, and the Demo Day showcase.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="./images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Open to All</h2>
-									<p>You don't have to be computer sicence major; we invite everyone who is interested in technology!</p>
-								</div>
-							</div>
-						</section>
-					</section>
+                        <div class="calender__item">
+                            <h2> JAN 29 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-					<!-- Two -->
-					<section id="two" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Meet the Team</h2>
-							<div class="features">
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Bryan Ngo</h3>
-									<p>President</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Jason Lee</h3>
-									<p>Vice President</p>
-								</section>
-								<section>
-									<span class="icon major fa-cog"></span>
-									<h3>Shivani Bhushan</h3>
-									<p>Treasurer</p>
-								</section>
-								<section>
-									<span class="icon major fa-desktop"></span>
-									<h3>Ynna Lecitona</h3>
-									<p>Secretary</p>
-								</section>
-								<section>
-									<span class="icon major fa-chain"></span>
-									<h3>Shivam Desai</h3>
-									<p>Co-Director of Technology</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Peter Kim</h3>
-									<p>Co-Director of Technology</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Allison Tearjen</h3>
-									<p>External Outreach Chair</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Sethmi (Mia) Dharmasiri</h3>
-									<p>Events Chair</p>
-								</section>
-								<section>
-									<span class="icon major fa-diamond"></span>
-									<h3>Julie Deng</h3>
-									<p>Public Relations/Design Chair</p>
-								</section>
-								<section>
-									<h3></h3>
-									<p></p>
-								</section>
-							</div>
-						</div>
-					</section>
+                        <div class="calender__item">
+                            <h2> FEB 05 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>The easiest way to contact us is directly through this form or the email listed below! You can also reach us through Facebook and of course, at our weekly meetings. Please do not contact individual officers directly without good reason.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="/">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<a href="#">officers@daviscsclub.org</a>
-										</li>
-										<li>
-											<h3>Facebook Page</h3>
-											<ul class="icons">
-												<li><a href="https://www.facebook.com/daviscsclub/" class="fa-facebook"><span class="label">Facebook</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+                        <div class="calender__item">
+                            <h2> FEB 12 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calender__right">
+                        <div class="calender__item">
+                            <h2> FEB 19 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-					<!-- Four -->
-						<section id="four" class="wrapper style1 fade-up">
-							<div class="inner">
-								<div style="margin-bottom: 20px;">
-								<h2>Sign in to a DCSC Event here!</h2>
-							</div>
-								<div class="split style1">
-									<section>
-										<form method="post">
+                        <div class="calender__item">
+                            <h2> FEB 26 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-										<div style="margin-bottom: 20px;">
-										<label>First name</label>
-										<input type="text" name="firstName" required>
-										</div>
+                        <div class="calender__item">
+                            <h2> MAR 05 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-										<div style="margin-bottom: 20px;">
-										<label>Last name</label>
-										<input type="text" name="lastName" required>
-										</div>
+                        <div class="calender__item">
+                            <h2> MAR 12 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-										<div style="margin-bottom: 20px;">
-										<label>Year</label>
-										<input type="text" name="year">
-										</div>
+                        <div class="calender__item">
+                            <h2> MAR 19 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
 
-										<div style="margin-bottom: 20px;">
-										<label>Email</label>
-										<input type="text" name="email" required>
-										</div>
+                        <div class="calender__item">
+                            <h2> MAR 26 </h2>
+                            <div class="calender__item__p">
+                                <p> DCSC Blaze Pizza Fundraiser </p>
+                                <p> Sun 7pm | Davis CA </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-										<div style="margin-bottom: 20px;">
-										<label>Are you a bit or byte?</label>
-										<input type="text" name="bitbyte">
-										</div>
+            <section class="bitbyte padding-top" id="schedule">
+                <h1> Bit Byte | Mentorship </h1>
+                <div class="bitbyte__wrap">
+                    <img class="bitbyte__img" src="./images/group-place.jpg"/>
+                    <div class="bitbyte__wrap__p">
+                        <p> The <span>Davis Computer Science Club</span> is proud to announce
+                            the start of our <span>Bit Byte</span> mentorship program! If you’re
+                            looking for guidance on your career, looking to pass
+                            down knowledge, or just looking for a sense of
+                            community, this program is perfect for you! </p>
+                            <p> As a <span>Bit</span> (Mentee), you would have the chance to
+                            receive help and guidance from a more experienced
+                            student, whether it be with internships, career, or classes! </p>
+                            <p> As a <span>Byte</span> (Mentor), you would be able to spread your
+                            wisdom and pass down your knowledge from over the years.
+                            You have a chance to lead new students and act as a
+                            valuable source of information on college life.
+                            Don't miss out!</p>
+                    </div>
+                </div>
+            </section>
 
-										<div style="margin-bottom: 20px;">
-										<label>How did you hear about this event?</label>
-										<input type="text" name="source">
-										</div>
+            <section class="team padding-top" id="three">
+                <h1> MEET THE TEAM OFFICERS </h1>
+                <div class="team__grid">
+                    <div class="team__grid__row">
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/bryan.jpg"/>
+                            <h2 class="team__grid__officer__name">Bryan Ngo</h2>
+                            <h2 class="team__grid__officer__title">President</h2>
+                        </div>
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/jason.JPG"/>
+                            <h2 class="team__grid__officer__name">Jason Lee</h2>
+                            <h2 class="team__grid__officer__title">Vice President</h2>
+                        </div>
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/shivam.jpg"/>
+                            <h2 class="team__grid__officer__name">Shivam Desai</h2>
+                            <h2 class="team__grid__officer__title">Director of Technology</h2>
+                        </div>
+                    </div>
 
+                    <div class="team__grid__row">
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/julie.jpg"/>
+                            <h2 class="team__grid__officer__name">Julie Deng</h2>
+                            <h2 class="team__grid__officer__title"> Public Relations & Chair</h2>
+                        </div>
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/shivani.jpg"/>
+                            <h2 class="team__grid__officer__name">Shivani Bhushan</h2>
+                            <h2 class="team__grid__officer__title">Treasurer</h2>
+                        </div>
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/ynna.JPG"/>
+                            <h2 class="team__grid__officer__name">Ynna Lecitona</h2>
+                            <h2 class="team__grid__officer__title">Secretary</h2>
+                        </div>
+                    </div>
 
-										 <div style="margin-bottom: 20px;">
-										<input type="submit" value="Sign in!">
-										</div>
-										</form>
-									</section>
+                    <div class="team__grid__row">
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/mia.jpg"/>
+                            <h2 class="team__grid__officer__name">Mia Dharmasiri</h2>
+                            <h2 class="team__grid__officer__title">Events Chair</h2>
+                        </div>
+                        <div class="team__grid__row__officer">
+                            <img class="team__grid__offcer__img" src="./images/allison.jpg"/>
+                            <h2 class="team__grid__officer__name">Allison Tearjen</h2>
+                            <h2 class="team__grid__officer__title">Ext. Outreach Chair</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-								</div>
-							</div>
-						</section>
+            <section class="contact padding-top" id="four">
+                <div class="contact__wrap">
+                    <h1>Get in touch</h1>
+                    <div class="contact__split style1">
+                        <div class="contact__split__forms">
+                            <form method="post">
 
-			</div>
+                              <label for="fname">First Name</label>
+                              <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
 
+                              <label for="lname">Last Name</label>
+                              <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy;2018 Davis Computer Science Club</li>
-						<li><ul class="icons">
-							<li><a href="https://www.facebook.com/daviscsclub/" class="fa-facebook"><span class="label">Facebook</span></a></li>
-						</ul></li>
-					</ul>
-				</div>
-			</footer>
+                              <label for="subject">Subject</label>
+                              <textarea id="subject" name="subject" placeholder="Your message" style="height:200px" required></textarea>
 
-			<!-- Scripts -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/jquery.scrollex.min.js"></script>
-			<script src="js/jquery.scrolly.min.js"></script>
-			<script src="js/browser.min.js"></script>
-			<script src="js/breakpoints.min.js"></script>
-			<script src="js/util.js"></script>
-			<script src="js/main.js"></script>
+                              <input type="submit" value="Submit">
+                            </form>
+                        </div>
 
-	</body>
+                        <div class="contact__split__social">
+                            <ul class="contact__res" style="list-style-type=none">
+                            <li>
+                                <h3>Email</h3>
+                                <a href="#">officers@daviscsclub.org</a>
+                            </li>
+                            <li>
+                                <h3>Come find us on social media</h3>
+                                <ul class="icon-bar" style="justify-content: flex-start">
+                                    <li><a href="https://www.facebook.com/daviscsclub/"><i style="color:black" class="fab fa-facebook fa-3x"></i></a></li>
+                                    <li><a href="https://www.instagram.com/daviscsclub/"><i style="color:black" class="fab fa-instagram fa-3x"></i></a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="login padding-top" id="five">
+                <div class="login__wrapper">
+                    <div style="margin-bottom: 20px;">
+                        <h1>Sign in to a DCSC Event here!</h1>
+                    </div>
+                    <div class="login__split style1">
+                        <div class="login__split__form">
+                            <form method="post">
+
+                                <div style="margin-bottom: 10px;">
+                                    <label>First name</label>
+                                    <input type="text" name="firstName" required>
+                                </div>
+
+                                <div style="margin-bottom: 10px;">
+                                    <label>Last name</label>
+                                    <input type="text" name="lastName" required>
+                                </div>
+
+                                <div style="margin-bottom: 10px;">
+                                    <label>Year</label>
+                                    <input type="text" name="year">
+                                </div>
+
+                                <div style="margin-bottom: 10px;">
+                                    <label>Email</label>
+                                    <input type="text" name="email" required>
+                                </div>
+
+                                <div style="margin-bottom: 10px;">
+                                    <label>Are you a bit or byte?</label>
+                                    <input type="text" name="bitbyte">
+                                </div>
+
+                                <div style="margin-bottom: 10px;">
+                                    <label>How did you hear about this event?</label>
+                                    <input type="text" name="source">
+                                </div>
+
+                                <div style="margin-bottom: 10px;">
+                                    <input type="submit" value="Sign in!">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer">
+                <p> Davis Computer Science Club</p>
+                <ul class="footer__icon-bar">
+                    <li><a href="https://www.facebook.com/daviscsclub/"/><i style="color:white" class="fab fa-facebook-f fa-2x" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/daviscsclub/"/><i style="color:white" class="fab fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+                </ul>
+                <p> <a href="officers@daviscsclub.org">officers@daviscsclub.org</a></p>
+            </section>
+        </div>
+
+        <script src="index.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
