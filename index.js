@@ -53,7 +53,7 @@ app.post("/", (req, res) => {
     if (err) {
       throw err;
     }
-    var dbo = db.db("dcsc_tests");
+    var dbo = db.db("dcsc");
     var myobj = {
       timestamp: date_obj,
       first_Name: req.body.firstName,
