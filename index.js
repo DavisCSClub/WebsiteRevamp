@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 window.onload = (function($) {
     var date = new Date().toDateString().split(' ');
     var date_string = 'Today ' + date[1] + ' ' + date[2] + ' ' + date[3];
@@ -13,7 +13,7 @@ window.onload = (function($) {
 setTimeout(function(){
     location.reload();
 },10000000);
-
+*/
 
 const express = require('express');
 const app = express();

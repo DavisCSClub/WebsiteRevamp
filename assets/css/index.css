@@ -443,6 +443,7 @@ li {
 }
 
 .bitbyte__wrap {
+    height: 80%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -461,8 +462,8 @@ li {
 }
 
 .bitbyte__img {
-    height: 50%;
-    width: 50%;
+    height: 80%;
+    width: 60%;
 }
 
 /* Phone & Tablet Scaling */
