@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-app.use(express.static('assets'));
-app.use(express.static('images'));
+app.use(express.static('client/assets'));
+app.use(express.static('client/images'));
 
 const mongoose = require('mongoose');
 const http = require('http');
@@ -65,15 +65,15 @@ app.post("/", (req, res) => {
     if (err) return console.error(err);
   });
 
-  res.sendFile(__dirname + "/index.html")
+  res.sendFile(__dirname + "/client/index.html")
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html")
+  res.sendFile(__dirname + "/client/index.html")
 })
 
 
-const server = app.listen(8080 | process.env.PORT , () => {
+const server = app.listen(8080 || process.env.PORT , () => {
   const host = server.address().address;
   const port = server.address().port;
 
