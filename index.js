@@ -108,12 +108,13 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/client/index.html")
 })
 
+
 async function addToSpreadsheet (member) {
   const doc = new GoogleSpreadsheet('1DLrimkYI1BLhXU_8ow2igEavVA0xCL0CNT3JB74MYCI');
   await promisify(doc.useServiceAccountAuth)(creds);
   const info = await promisify(doc.getInfo)();
 
-  const sheet = info.worksheets[0];
+  const sheet = info.worksheets[1];
 
   const row = {
     FirstName: member.firstName,
@@ -128,6 +129,7 @@ async function addToSpreadsheet (member) {
 
   console.log("New entry added to speadsheet")
 }
+
 
 
 const server = app.listen(process.env.PORT || 3000 , () => {

@@ -65,11 +65,7 @@ console.log(members)
 });
 */
 
-Member.find({
-  eventYear: "2019",
-  eventMonth: "04",
-  eventDay: "22"
-}, (err, members) => {
+Member.find((err, members) => {
   if (err){
     return res.send({
       success: false,
