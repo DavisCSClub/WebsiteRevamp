@@ -1,5 +1,4 @@
-# WebsiteV2
-Website revamp
+Website
 
 To run locally:
 
@@ -7,4 +6,4 @@ To run locally:
 2. Run ```npm start```.
 3. Open localhost:8080 to open dev server and view the project.
 
-Temp webpage: https://earnest-math-221000.appspot.com/
+Temp webpage: https://daviscsclub.org/
