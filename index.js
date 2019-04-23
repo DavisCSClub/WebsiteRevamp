@@ -1,6 +1,9 @@
 'use strict';
 
 const express = require('express');
+const GoogleSpreadsheet = require('google-spreadsheet');
+const { promisify } = require('util');
+const creds = require('./client_secret');
 const app = express();
 var bodyParser = require('body-parser')
 app.use( bodyParser.json());       // to support JSON-encoded bodies
@@ -51,19 +54,52 @@ const memberSchema = new mongoose.Schema({
   source: {
     type: String,
     default: ''
-  }
+  },
+  eventDay: {
+    type: String,
+    default: ''
+  },
+  eventMonth: {
+    type: String,
+    default: ''
+  },
+  eventYear: {
+    type: String,
+    default: ''
+  },
+
 });
+
+var date = new Date();
+
+var year = date.getFullYear();
+var month = date.getMonth() + 1;
+month = (month < 10 ? "0" : "") + month;
+var day  = date.getDate();
+day = (day < 10 ? "0" : "") + day;
 
 var Member = mongoose.model('Member', memberSchema)
 
 app.post("/", (req, res) => {
 
-  var newMember = new Member(req.body);
+  var newMember = new Member({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    year: req.body.year,
+    bitbyte: req.body.bitbyte,
+    source: req.body.source,
+    eventDay: day,
+    eventMonth: month,
+    eventYear: year
+  });
 
-  console.log(newMember)
   newMember.save(function (err, newMember) {
     if (err) return console.error(err);
   });
+
+  addToSpreadsheet(newMember)
+
 
   res.sendFile(__dirname + "/client/index.html")
 });
@@ -72,8 +108,29 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/client/index.html")
 })
 
+async function addToSpreadsheet (member) {
+  const doc = new GoogleSpreadsheet('1DLrimkYI1BLhXU_8ow2igEavVA0xCL0CNT3JB74MYCI');
+  await promisify(doc.useServiceAccountAuth)(creds);
+  const info = await promisify(doc.getInfo)();
 
-const server = app.listen(process.env.PORT || 8080 , () => {
+  const sheet = info.worksheets[0];
+
+  const row = {
+    FirstName: member.firstName,
+    LastName: member.lastName,
+    Email: member.email,
+    Year: member.year,
+    BitByte: member.bitbyte,
+    Source: member.source
+  }
+
+  await promisify(sheet.addRow)(row)
+
+  console.log("New entry added to speadsheet")
+}
+
+
+const server = app.listen(process.env.PORT || 3000 , () => {
   const host = server.address().address;
   const port = server.address().port;
 
