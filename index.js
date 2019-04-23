@@ -78,6 +78,9 @@ month = (month < 10 ? "0" : "") + month;
 var day  = date.getDate();
 day = (day < 10 ? "0" : "") + day;
 
+var datestring = year + "" + month + "" + day
+var datestring_sheet = month + "/" + day + "/" + year
+
 var Member = mongoose.model('Member', memberSchema)
 
 app.post("/", (req, res) => {
@@ -100,7 +103,6 @@ app.post("/", (req, res) => {
 
   addToSpreadsheet(newMember)
 
-
   res.sendFile(__dirname + "/client/index.html")
 });
 
@@ -114,20 +116,52 @@ async function addToSpreadsheet (member) {
   await promisify(doc.useServiceAccountAuth)(creds);
   const info = await promisify(doc.getInfo)();
 
-  const sheet = info.worksheets[1];
 
   const row = {
+    Timestamp: datestring_sheet,
     FirstName: member.firstName,
     LastName: member.lastName,
     Email: member.email,
     Year: member.year,
     BitByte: member.bitbyte,
-    Source: member.source
+    Source: member.source,
   }
 
-  await promisify(sheet.addRow)(row)
 
-  console.log("New entry added to speadsheet")
+  doc.addWorksheet({title: datestring + "_Signins"}, function (err, sheet1) {
+    if (err) {
+      console.log("Found existing spreadsheet")
+      var sheet;
+      var i = 0;
+      for (; i < info.worksheets.length; i++){
+        if (info.worksheets[i].title === (datestring + "_Signins")){
+          sheet = info.worksheets[i]
+        }
+      }
+
+      sheet.addRow(row, function(err){
+        if (err) console.log(err)
+      })
+
+      console.log("New entry added to spreadsheet")
+      return
+    } else {
+      console.log("New sheet created")
+
+      sheet1.setHeaderRow(["Timestamp", "FirstName", "LastName", "Email", "Year", "BitByte", "Source"], function(err) {
+        if (err) console.log(err)
+        else {
+          sheet1.addRow(row, function(err){
+            if (err) console.log(err)
+          })
+        }
+      })
+
+      console.log("New entry added to spreadsheet")
+    }
+  })
+
+
 }
 
 
