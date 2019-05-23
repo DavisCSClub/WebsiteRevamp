@@ -1,190 +1,212 @@
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+$(document).ready(function(){
+	
+	// var headerHeight = $('header').outerHeight();
 
-(function($) {
+	$('#navbar li a').click(function(e){
+		// alert('Clicked');
+		// References current link clicked and grabbs href attribute
+		var targetHref = $(this).attr('href');
 
-	var	$window = $(window),
-		$body = $('body'),
-		$navbar = $('#navbar');
+		$('html, body').animate({
+			scrollTop: $(targetHref).offset().top 
+			// scrollTop: $(targetHref).offset().top - headerHeight
+		}, 1000);
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ]
-		});
+		e.preventDefault();
+	});
 
-	// Hack: Enable IE flexbox workarounds.
-		if (browser.name == 'ie')
-			$body.addClass('is-ie');
+});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
 
-	// Forms.
 
-		// Hack: Activate non-input submits.
-			$('form').on('click', '.submit', function(event) {
 
-				// Stop propagation, default.
-					event.stopPropagation();
-					event.preventDefault();
+// /*
+// 	Hyperspace by HTML5 UP
+// 	html5up.net | @ajlkn
+// 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+// */
 
-				// Submit form.
-					$(this).parents('form').submit();
+// (function($) {
 
-			});
+// 	var	$window = $(window),
+// 		$body = $('body'),
+// 		$navbar = $('#navbar');
 
-	// navbar.
-		if ($navbar.length > 0) {
+// 	// Breakpoints.
+// 		breakpoints({
+// 			xlarge:   [ '1281px',  '1680px' ],
+// 			large:    [ '981px',   '1280px' ],
+// 			medium:   [ '737px',   '980px'  ],
+// 			small:    [ '481px',   '736px'  ],
+// 			xsmall:   [ null,      '480px'  ]
+// 		});
 
-			var $navbar_a = $navbar.find('a');
+// 	// Hack: Enable IE flexbox workarounds.
+// 		if (browser.name == 'ie')
+// 			$body.addClass('is-ie');
 
-			$navbar_a
-				.addClass('scrolly')
-				.on('click', function() {
+// 	// Play initial animations on page load.
+// 		$window.on('load', function() {
+// 			window.setTimeout(function() {
+// 				$body.removeClass('is-preload');
+// 			}, 100);
+// 		});
 
-					var $this = $(this);
+// 	// Forms.
 
-					// External link? Bail.
-						if ($this.attr('href').charAt(0) != '#')
-							return;
+// 		// Hack: Activate non-input submits.
+// 			$('form').on('click', '.submit', function(event) {
 
-					// Deactivate all links.
-						$navbar_a.removeClass('active');
+// 				// Stop propagation, default.
+// 					event.stopPropagation();
+// 					event.preventDefault();
 
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-						$this
-							.addClass('active')
-							.addClass('active-locked');
+// 				// Submit form.
+// 					$(this).parents('form').submit();
 
-				})
-				.each(function() {
+// 			});
 
-					var	$this = $(this),
-						id = $this.attr('href'),
-						$section = $(id);
+// 	// navbar.
+// 		if ($navbar.length > 0) {
 
-					// No section for this link? Bail.
-						if ($section.length < 1)
-							return;
+// 			var $navbar_a = $navbar.find('a');
 
-					// Scrollex.
-						$section.scrollex({
-							mode: 'middle',
-							top: '-20vh',
-							bottom: '-20vh',
-							initialize: function() {
+// 			$navbar_a
+// 				.addClass('scrolly')
+// 				.on('click', function() {
 
-								// Deactivate section.
-									$section.addClass('inactive');
+// 					var $this = $(this);
 
-							},
-							enter: function() {
+// 					// External link? Bail.
+// 						if ($this.attr('href').charAt(0) != '#')
+// 							return;
 
-								// Activate section.
-									$section.removeClass('inactive');
+// 					// Deactivate all links.
+// 						$navbar_a.removeClass('active');
 
-								// No locked links? Deactivate all links and activate this section's one.
-									if ($navbar_a.filter('.active-locked').length == 0) {
+// 					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+// 						$this
+// 							.addClass('active')
+// 							.addClass('active-locked');
 
-										$navbar_a.removeClass('active');
-										$this.addClass('active');
+// 				})
+// 				.each(function() {
 
-									}
+// 					var	$this = $(this),
+// 						id = $this.attr('href'),
+// 						$section = $(id);
 
-								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
-										$this.removeClass('active-locked');
+// 					// No section for this link? Bail.
+// 						if ($section.length < 1)
+// 							return;
 
-							}
-						});
+// 					// Scrollex.
+// 						$section.scrollex({
+// 							mode: 'middle',
+// 							top: '-20vh',
+// 							bottom: '-20vh',
+// 							initialize: function() {
 
-				});
+// 								// Deactivate section.
+// 									$section.addClass('inactive');
 
-		}
+// 							},
+// 							enter: function() {
 
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() {
+// 								// Activate section.
+// 									$section.removeClass('inactive');
 
-				// If <=large, >small, and navbar is present, use its height as the offset.
-					if (breakpoints.active('<=large')
-					&&	!breakpoints.active('<=small')
-					&&	$navbar.length > 0)
-						return $navbar.height();
+// 								// No locked links? Deactivate all links and activate this section's one.
+// 									if ($navbar_a.filter('.active-locked').length == 0) {
 
-				return 0;
+// 										$navbar_a.removeClass('active');
+// 										$this.addClass('active');
 
-			}
-		});
+// 									}
 
-	// Spotlights.
-		$('.spotlights > section')
-			.scrollex({
-				mode: 'middle',
-				top: '-10vh',
-				bottom: '-10vh',
-				initialize: function() {
+// 								// Otherwise, if this section's link is the one that's locked, unlock it.
+// 									else if ($this.hasClass('active-locked'))
+// 										$this.removeClass('active-locked');
 
-					// Deactivate section.
-						$(this).addClass('inactive');
+// 							}
+// 						});
 
-				},
-				enter: function() {
+// 				});
 
-					// Activate section.
-						$(this).removeClass('inactive');
+// 		}
 
-				}
-			})
-			.each(function() {
+// 	// Scrolly.
+// 		$('.scrolly').scrolly({
+// 			speed: 1000,
+// 			offset: function() {
 
-				var	$this = $(this),
-					$image = $this.find('.image'),
-					$img = $image.find('img'),
-					x;
+// 				// If <=large, >small, and navbar is present, use its height as the offset.
+// 					if (breakpoints.active('<=large')
+// 					&&	!breakpoints.active('<=small')
+// 					&&	$navbar.length > 0)
+// 						return $navbar.height();
 
-				// Assign image.
-					$image.css('background-image', 'url(' + $img.attr('src') + ')');
+// 				return 0;
 
-				// Set background position.
-					if (x = $img.data('position'))
-						$image.css('background-position', x);
+// 			}
+// 		});
 
-				// Hide <img>.
-					$img.hide();
+// 	// Spotlights.
+// 		$('.spotlights > section')
+// 			.scrollex({
+// 				mode: 'middle',
+// 				top: '-10vh',
+// 				bottom: '-10vh',
+// 				initialize: function() {
 
-			});
+// 					// Deactivate section.
+// 						$(this).addClass('inactive');
 
-	// Features.
-		$('.features')
-			.scrollex({
-				mode: 'middle',
-				top: '-20vh',
-				bottom: '-20vh',
-				initialize: function() {
+// 				},
+// 				enter: function() {
 
-					// Deactivate section.
-						$(this).addClass('inactive');
+// 					// Activate section.
+// 						$(this).removeClass('inactive');
 
-				},
-				enter: function() {
+// 				}
+// 			})
+// 			.each(function() {
 
-					// Activate section.
-						$(this).removeClass('inactive');
+// 				var	$this = $(this),
+// 					$image = $this.find('.image'),
+// 					$img = $image.find('img'),
+// 					x;
 
-				}
-			});
+// 				// Assign image.
+// 					$image.css('background-image', 'url(' + $img.attr('src') + ')');
 
-})(jQuery);
+// 				// Set background position.
+// 					if (x = $img.data('position'))
+// 						$image.css('background-position', x);
+
+// 				// Hide <img>.
+// 					$img.hide();
+
+// 			});
+
+// 	// Features.
+// 		$('.features')
+// 			.scrollex({
+// 				mode: 'middle',
+// 				top: '-20vh',
+// 				bottom: '-20vh',
+// 				initialize: function() {
+
+// 					// Deactivate section.
+// 						$(this).addClass('inactive');
+
+// 				},
+// 				enter: function() {
+
+// 					// Activate section.
+// 						$(this).removeClass('inactive');
+
+// 				}
+// 			});
+
+// })(jQuery);
